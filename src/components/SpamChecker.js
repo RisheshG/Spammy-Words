@@ -5,7 +5,6 @@ import {
   Dialog,
   DialogActions,
   DialogContent,
-  DialogContentText,
   DialogTitle,
   TextField,
 } from '@mui/material';
@@ -16,13 +15,16 @@ function SpamChecker() {
   const [openInputDialog, setOpenInputDialog] = useState(false);
   const [openResultDialog, setOpenResultDialog] = useState(false);
 
+  // Update the backend URL to the live API
+  const backendUrl = 'https://sw-backend-production.up.railway.app/check-spam';
+
   const handleInputChange = (event) => {
     setText(event.target.value);
   };
 
   const handleCheckSpam = async () => {
     try {
-      const response = await fetch('http://localhost:3000/check-spam', {
+      const response = await fetch(backendUrl, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -36,9 +38,11 @@ function SpamChecker() {
         setOpenResultDialog(true); // Open the result dialog on success
       } else {
         console.error('Error: Failed to check spam.');
+        alert('Failed to check spam. Please try again.');
       }
     } catch (error) {
       console.error('Error:', error);
+      alert('An error occurred while connecting to the server.');
     }
   };
 

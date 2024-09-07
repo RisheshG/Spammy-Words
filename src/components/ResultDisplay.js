@@ -3,6 +3,7 @@ import React, { useRef } from 'react';
 function ResultDisplay({ result }) {
   const hasLogged = useRef(false);
 
+  // Log the result data only once to avoid duplicate logs
   if (!hasLogged.current) {
     console.log('Result data:', result);
     hasLogged.current = true;
