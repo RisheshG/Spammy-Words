@@ -164,9 +164,16 @@ button:active {
   padding: 20px !important;
 }
 
-.MuiInputBase-input.MuiOutlinedInput-input.MuiInputBase-inputMultiline.css-1sqnrkk-MuiInputBase-input-MuiOutlinedInput-input {
-  color: white;
+.MuiDialogContent-root input,
+.MuiDialogContent-root textarea {
+  color: #ffffff !important;
 }
+
+.MuiDialogContent-root input::placeholder,
+.MuiDialogContent-root textarea::placeholder {
+  color: #ffffff !important; 
+}
+
 
 /* Result Display Styles */
 .result-display {
