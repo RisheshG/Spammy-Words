@@ -15,8 +15,7 @@ function SpamChecker() {
   const [openInputDialog, setOpenInputDialog] = useState(false);
   const [openResultDialog, setOpenResultDialog] = useState(false);
 
-  // Update the backend URL to the live API
-  const backendUrl = 'https://sw-backend-production.up.railway.app/check-spam';
+  const backendUrl = 'https://sw-backend-six.vercel.app/';
 
   const handleInputChange = (event) => {
     setText(event.target.value);
