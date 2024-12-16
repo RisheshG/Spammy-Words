@@ -15,7 +15,7 @@ function SpamChecker() {
   const [openInputDialog, setOpenInputDialog] = useState(false);
   const [openResultDialog, setOpenResultDialog] = useState(false);
 
-  const backendUrl = 'https://sw-backend-six.vercel.app/';
+  const backendUrl = 'https://sw-backend-myg5.onrender.com/';
 
   const handleInputChange = (event) => {
     setText(event.target.value);
